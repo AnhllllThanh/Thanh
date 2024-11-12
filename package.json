@@ -1,5 +1,5 @@
 {
-  "name": "anhthanhdeptrai.com", // Thay thế "your-project-name" bằng tên dự án của bạn
+  "name": "Thanh", // Thay thế "your-project-name" bằng tên dự án của bạn
   "version": "1.0.0", 
   "description": "Mô tả ngắn gọn về dự án", 
   "main": "server.js", //  Thay thế "server.js" bằng file entry point của bạn (ví dụ: "index.js") 
