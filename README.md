@@ -98,4 +98,4 @@
         button.href = 'javascript:void(0);'; // Ngăn chặn truy cập link
       }
     });
-  </script></h1></center>
+  </script></center>
