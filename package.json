@@ -1,28 +1,34 @@
 {
-  "name": "Thanh", 
-  "version": "1.0.0", 
-  "description": "Thanh", 
-  "main": "server.js", 
+  "name": "Thanh",
+  "version": "1.0.0",
+  "description": "Thanh",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js", 
-    "build": "npm install && npm run build:server", 
-    "build:server": "tsc && tsc-watch --onSuccess \"npm run copy:assets && npm run copy:dist\"",
+    "start": "node server.js",
+    "build": "npm install && webpack --config webpack.config.js --mode=production --progress", 
+    "build:server": "tsc && tsc-watch --onSuccess npm run copy:assets && npm run copy:dist", 
+    "copy:assets": "copy-webpack-plugin ./src/public ./build/public", // Lệnh   copy  các  file  trong   thư  mục   public   vào   build
+    "copy:dist": "copy-webpack-plugin ./src/dist ./build/dist" //  Lệnh   copy  các   file   build  từ  thư  mục  src  vào   thư  mục  build 
   },
-  "author": "acc.xinh003@gmail.com", 
+  "author": "acc.xinh003@gmail.com",
   "license": "MIT",
-  "dependencies": { 
-    "express": "^4.18.2", 
-    "body-parser": "^1.20.2", 
-    "bcrypt": "^5.1.0", 
-    "mongoose": "^6.7.0", 
-    "express-session": "^1.18.2",
-    "connect-mongo": "^4.7.2", 
-    "nodemailer": "^6.9.1", 
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "bcrypt": "^5.1.0",
+    "mongoose": "^6.7.0",
+    "express-session": "^1.18.1",
+    "connect-mongo": "^4.6.0",
+    "nodemailer": "^6.9.1",
     "crypto": "^1.0.1"
   },
-  "devDependencies": { 
-    "typescript": "^4.9.5", 
-    "tsc-watch": "^5.0.3" 
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "tsc-watch": "^5.0.3", 
+    "copy-webpack-plugin": "^8.0.1",
+    "webpack": "^5.76.3",  
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.13.3", 
   },
   "repository": {
     "url": "git+https://github.com/anhllllTthanh/Thanh.git"
