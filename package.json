@@ -6,10 +6,10 @@
   "scripts": {
     "start": "node server.js",
     "build": "npm install && webpack --config webpack.config.js --mode=production --progress", 
-    "build:server": "tsc && tsc-watch --onSuccess npm run copy:assets && npm run copy:dist", 
-    "copy:assets": "copy-webpack-plugin ./src/public ./build/public", // Lệnh   copy  các  file  trong   thư  mục   public   vào   build
-    "copy:dist": "copy-webpack-plugin ./src/dist ./build/dist" //  Lệnh   copy  các   file   build  từ  thư  mục  src  vào   thư  mục  build 
-  },
+    "build:server": "tsc && tsc-watch --onSuccess npm run copy:assets && npm run copy:dist",
+    "copy:assets": "webpack --config webpack.config.js --mode=production --progress",
+    "copy:dist": "xxx" //  Thêm  lệnh  copy:dist  tại   đây,  yyy   là  lệnh  để  copy  các  file  đã   build. 
+},
   "author": "acc.xinh003@gmail.com",
   "license": "MIT",
   "dependencies": {
