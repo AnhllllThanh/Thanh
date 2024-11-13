@@ -1,4 +1,4 @@
- {
+{
   "name": "Thanh",
   "version": "1.0.0",
   "description": "Thanh",
@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "build": "npm install && npm run build:server",
-    "build:server": "tsc && tsc-watch --onSuccess npm run copy:assets && npm run copy:dist", 
+    "build:server": "tsc && tsc-watch --onSuccess npm run copy:assets && npm run copy:dist",
     "copy:assets": "webpack --config webpack.config.js --mode=production --progress",
-    "copy:dist": "webpack --config webpack.config.js --mode=production --progress" 
+    "copy:dist": "webpack --config webpack.config.js --mode=production --progress"
   },
   "author": "acc.xinh003@gmail.com",
   "license": "MIT",
@@ -24,11 +24,11 @@
   },
   "devDependencies": {
     "typescript": "^4.9.5",
-    "tsc-watch": "^5.0.3", 
+    "tsc-watch": "^5.0.3",
     "copy-webpack-plugin": "^8.0.1",
-    "webpack": "^5.76.3",  
+    "webpack": "^5.76.3",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.13.3", 
+    "webpack-dev-server": "^4.13.3"
   },
   "repository": {
     "url": "git+https://github.com/anhllllTthanh/Thanh.git"
