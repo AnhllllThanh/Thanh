@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "npm install && webpack --config webpack.config.js --mode=production --progress", 
-    "build:server": "tsc && tsc-watch --onSuccess npm run copy:assets && npm run copy:dist",
-    "copy:assets": "webpack --config webpack.config.js --mode=production --progress",
-    "copy:dist": "xxx" //  Thêm  lệnh  copy:dist  tại   đây,  yyy   là  lệnh  để  copy  các  file  đã   build. 
-},
+    "build": "npm install && npm run build:server",
+    "build:server": "tsc && tsc-watch --onSuccess \"npm run copy:assets && npm run copy:dist\"",
+    "copy:assets": "copy-webpack-plugin ./src/public ./build/public", //  Lệnh  copy  các  file  trong   thư  mục   public   vào   build
+    "copy:dist": "copy-webpack-plugin ./src/dist ./build/dist" // Lệnh copy  các   file   build  từ  thư  mục  src  vào   thư  mục  build
+  },
   "author": "acc.xinh003@gmail.com",
   "license": "MIT",
   "dependencies": {
@@ -25,10 +25,7 @@
   "devDependencies": {
     "typescript": "^4.9.5",
     "tsc-watch": "^5.0.3", 
-    "copy-webpack-plugin": "^8.0.1",
-    "webpack": "^5.76.3",  
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.13.3", 
+    "copy-webpack-plugin": "^8.0.1"
   },
   "repository": {
     "url": "git+https://github.com/anhllllTthanh/Thanh.git"
