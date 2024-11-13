@@ -1,27 +1,30 @@
 {
-  "name": "Thanh", // Thay thế "your-project-name" bằng tên dự án của bạn
+  "name": "Thanh", 
   "version": "1.0.0", 
-  "description": "Mô tả ngắn gọn về dự án", 
-  "main": "server.js", //  Thay thế "server.js" bằng file entry point của bạn (ví dụ: "index.js") 
+  "description": "Thanh", 
+  "main": "server.js", 
   "scripts": {
-    "start": "node server.js",  // Chạy server bằng lệnh `npm start` 
-    "build": "npm install && npm run build:server",  // Lệnh build ứng dụng 
-    "build:server": "tsc && tsc-watch --onSuccess \"npm run copy:assets && npm run copy:dist\""  //  Lệnh build cho server (có thể khác nhau) 
+    "start": "node server.js", 
+    "build": "npm install && npm run build:server", 
+    "build:server": "tsc && tsc-watch --onSuccess \"npm run copy:assets && npm run copy:dist\"",
   },
-  "author": "Thanh Truong",
+  "author": "acc.xinh003@gmail.com", 
   "license": "MIT",
   "dependencies": { 
-    "express": "^4.18.2", // Express.js 
-    "body-parser": "^1.20.2", //  Xử lý body của request
-    "bcrypt": "^5.1.0", // Mã hóa password
-    "mongoose": "^6.7.0", // Kết nối với MongoDB
-    "express-session": "^1.18.2", // Session 
-    "connect-mongo": "^4.7.2", //  Lưu session vào MongoDB
-    "nodemailer": "^6.9.1", // Gửi email
-    "crypto": "^1.0.1" // Tạo token 
+    "express": "^4.18.2", 
+    "body-parser": "^1.20.2", 
+    "bcrypt": "^5.1.0", 
+    "mongoose": "^6.7.0", 
+    "express-session": "^1.18.2",
+    "connect-mongo": "^4.7.2", 
+    "nodemailer": "^6.9.1", 
+    "crypto": "^1.0.1"
   },
   "devDependencies": { 
-    "typescript": "^4.9.5", //  TypeScript
-    "tsc-watch": "^5.0.3" //  TypeScript watch mode
+    "typescript": "^4.9.5", 
+    "tsc-watch": "^5.0.3" 
+  },
+  "repository": {
+    "url": "git+https://github.com/anhllllTthanh/Thanh.git"
   }
 }
