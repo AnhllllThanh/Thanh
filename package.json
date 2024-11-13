@@ -7,7 +7,7 @@
     "start": "node server.js",
     "build": "npm install && npm run build:server",
     "build:server": "tsc && tsc-watch --onSuccess npm run copy:assets && npm run copy:dist", 
-    "copy:assets": "webpack --config webpack.config.js --mode=production --progress",  //  Chạy   webpack   để   build 
+    "copy:assets": "webpack --config webpack.config.js --mode=production --progress",
     "copy:dist": "webpack --config webpack.config.js --mode=production --progress" 
   },
   "author": "acc.xinh003@gmail.com",
