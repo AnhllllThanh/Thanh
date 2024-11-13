@@ -4,13 +4,13 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const nodemailer = require('nodemailer'); // Thêm thư viện nodemailer để gửi email
-const crypto = require('crypto'); // Thêm thư viện crypto để tạo token
+const nodemailer = require('nodemailer'); 
+const crypto = require('crypto'); 
 
 const app = express();
 
 // Database configuration
-const dbURI = 'mongodb://localhost:27017/your-database-name'; // Replace with your MongoDB URI
+const dbURI = 'mongodb://localhost:27017/your-database-name'; 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
@@ -27,7 +27,10 @@ const User = mongoose.model('User', userSchema);
 
 // Configuration
 app.set('view engine', 'ejs'); // Using EJS
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(express.static('public'));  // Thêm   middleware  để  serve  static  file  (CSS,  JS,  images)
+
+// Set up session
 app.use(session({
   secret: 'your-secret-key', // Replace with a strong secret key
   resave: false,
